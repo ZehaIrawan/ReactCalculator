@@ -1,11 +1,14 @@
-import React from 'react'
+import React from 'react';
 
-const Display = () => {
-    return (
-        <div>
-            <h1>Display Component</h1>
-        </div>
-    )
-}
+const Display = props => {
+  return (
+    <div id='display'>
+      <h1>{props.result}</h1>
+    </div>
+  );
+};
 
-export default Display
+Display.defaultProps = {
+  result: '0'
+};
+export default Display;

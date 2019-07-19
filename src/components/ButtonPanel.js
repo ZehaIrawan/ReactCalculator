@@ -2,7 +2,7 @@ import React from 'react';
 
 const ButtonPanel = () => {
   return (
-    <div>
+    <div id="buttonPanel">
       <h1>ButtonPanel Component</h1>
     </div>
   );

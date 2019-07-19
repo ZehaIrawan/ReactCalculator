@@ -6,8 +6,9 @@ import Display from './Display';
 
 function App() {
   return (
-    <div className='container'>
+    <div id='container'>
       <Display />
+      {/* Pass result="" props to the display component */}
       <Button />
       <ButtonPanel />
     </div>
