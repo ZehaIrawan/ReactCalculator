@@ -5,30 +5,30 @@ const ButtonPanel = () => {
   return (
     <div id='buttonPanel'>
       <div className='row'>
-        <Button name='AC' />
-        <Button name='+/-' />
-        <Button name='%' />
-        <Button name='+' />
+        <Button names='AC' color='grey' wide={false} />
+        <Button names='+/-' color='grey' wide={false} />
+        <Button names='%' color='grey' wide={false} />
+        <Button names='+' wide={false} />
       </div>
 
       <div className='row'>
-        <Button name='7' />
-        <Button name='8' />
-        <Button name='9' />
-        <Button name='X' />
+        <Button names='7' color='grey' wide={false} />
+        <Button names='8' color='grey' wide={false} />
+        <Button names='9' color='grey' wide={false} />
+        <Button names='X' wide={false} />
       </div>
 
       <div className='row'>
-        <Button name='4' />
-        <Button name='5' />
-        <Button name='6' />
-        <Button name='-' />
+        <Button names='4' color='grey' wide={false} />
+        <Button names='5' color='grey' wide={false} />
+        <Button names='6' color='grey' wide={false} />
+        <Button names='-' wide={false} />
       </div>
 
       <div className='row'>
-        <Button name='0' />
-        <Button name='.' />
-        <Button name='=' />
+        <Button names='0' color='grey' wide={true} />
+        <Button names='.' color='grey' wide={false} />
+        <Button names='=' color='grey' wide={false} />
       </div>
     </div>
   );
