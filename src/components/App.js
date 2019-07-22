@@ -1,5 +1,7 @@
 import React from 'react';
-import '../styles/App.css';
+import '../styles/App.scss';
+import '../styles/Button.scss';
+import '../styles/ButtonPanel.scss';
 import ButtonPanel from './ButtonPanel';
 import Display from './Display';
 
