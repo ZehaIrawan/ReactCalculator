@@ -1,6 +1,10 @@
 import React from 'react';
 
-const Button = props => {
+const Button = (props) => {
+  const handleClick = e => {
+    console.log(e.target.value);
+  };
+
   let bg;
 
   props.color === 'grey'
@@ -16,7 +20,7 @@ const Button = props => {
   props.wide ? (expand = { width: '50%' }) : (expand = { width: '25%' });
 
   return (
-    <div className='button' style={{ ...bg, ...expand }}>
+    <div onClick={handleClick} className='button' style={{ ...bg, ...expand }}>
       {props.names}
     </div>
   );

@@ -1,7 +1,7 @@
 import React from 'react';
 import Button from './Button';
 
-const ButtonPanel = () => {
+const ButtonPanel = (props) => {
   return (
     <div id="buttonPanel">
       <div className="row">
