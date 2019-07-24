@@ -24,7 +24,7 @@ const ButtonPanel = props => {
           wide={false}
           clickHandler={ clickHandler}
         />
-        <Button names='+' wide={false} clickHandler={ clickHandler} />
+        <Button names='÷' wide={false} clickHandler={ clickHandler} />
       </div>
 
       <div className='row'>

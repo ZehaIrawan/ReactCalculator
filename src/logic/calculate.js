@@ -1,7 +1,7 @@
 import operate from './operate.js';
 
 const calculate = (data, buttonName) => {
-  console.log(data)
+  console.log(data);
   switch (buttonName) {
     case 'AC':
       data.total = 0;
@@ -15,23 +15,25 @@ const calculate = (data, buttonName) => {
       data.total = data.total * 100;
       break;
     // operators:
-    case '÷' :
+    case '÷':
     case 'X':
     case '+':
     case '-':
-        data.operation = buttonName;
-      if (data.next !== ''){
-        data.total = parseInt(data.next)
-        console.log(data.total)
+      data.operation = buttonName;
+      if (data.next !== '') {
+        data.total = operate(data.total, data.next, buttonName);
       }
-        data.next = '';
+      data.next = '';
       break;
     case '=':
-      if (data.next !== ''){
-        data.total = operate(parseInt(data.total), parseInt(data.next), data.operation);
+      if (data.next !== '') {
+        data.total = operate(data.total, data.next, data.operation);
         data.next = '';
       }
       break;
+      case '.':
+       data.next = data.next + '.'
+        break
     // numbers:
     case '0':
     case '1':
