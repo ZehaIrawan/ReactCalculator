@@ -7,18 +7,19 @@ import Display from './Display';
 import calculate from '../logic/calculate';
 
 function App() {
-  const [total, next, operation] = useState(null);
+  const [total, setTotal] = useState(null);
+  const [next, setNext] = useState(null);
+  const [operation, setOperation] = useState(null);
 
-  const handleClick = e => {
-    e.preventDefault();
-    console.log(e);
+  const handleClick = buttonName => {
+    console.log(buttonName);
   };
+
   return (
     <div id='container'>
-      <Display />
-      {/* Pass result="" props to the display component */}
+      <Display result={2} />
 
-      <ButtonPanel onClick={handleClick} />
+      <ButtonPanel clickHandler={handleClick} />
     </div>
   );
 }

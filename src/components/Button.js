@@ -1,13 +1,10 @@
 import React from 'react';
 
-const Button = (props) => {
-  const handleClick = e => {
-    console.log(e.target.value);
-  };
-
+const Button = props => {
+  const { clickHandler, names, wide, color } = props;
   let bg;
 
-  props.color === 'grey'
+  color === 'grey'
     ? (bg = {
         backgroundColor: 'grey'
       })
@@ -17,11 +14,16 @@ const Button = (props) => {
 
   let expand;
 
-  props.wide ? (expand = { width: '50%' }) : (expand = { width: '25%' });
+  wide ? (expand = { width: '50%' }) : (expand = { width: '25%' });
 
   return (
-    <div onClick={handleClick} className='button' style={{ ...bg, ...expand }}>
-      {props.names}
+    <div
+      onClick={() => clickHandler(names)}
+      value={names}
+      className='button'
+      style={{ ...bg, ...expand }}
+    >
+      {names}
     </div>
   );
 };
