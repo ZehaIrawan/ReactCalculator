@@ -16,15 +16,15 @@ const ButtonPanel = props => {
           names='+/-'
           color='grey'
           wide={false}
-          clickHandler={clickHandler}
+          clickHandler={ clickHandler}
         />
         <Button
           names='%'
           color='grey'
           wide={false}
-          clickHandler={clickHandler}
+          clickHandler={ clickHandler}
         />
-        <Button names='+' wide={false} clickHandler={clickHandler} />
+        <Button names='+' wide={false} clickHandler={ clickHandler} />
       </div>
 
       <div className='row'>
@@ -32,21 +32,21 @@ const ButtonPanel = props => {
           names='7'
           color='grey'
           wide={false}
-          clickHandler={clickHandler}
+          clickHandler={ clickHandler}
         />
         <Button
           names='8'
           color='grey'
           wide={false}
-          clickHandler={clickHandler}
+          clickHandler={ clickHandler}
         />
         <Button
           names='9'
           color='grey'
           wide={false}
-          clickHandler={clickHandler}
+          clickHandler={ clickHandler}
         />
-        <Button names='X' wide={false} clickHandler={clickHandler} />
+        <Button names='X' wide={false} clickHandler={ clickHandler} />
       </div>
 
       <div className='row'>
@@ -54,41 +54,58 @@ const ButtonPanel = props => {
           names='4'
           color='grey'
           wide={false}
-          clickHandler={clickHandler}
+          clickHandler={ clickHandler}
         />
         <Button
           names='5'
           color='grey'
           wide={false}
-          clickHandler={clickHandler}
+          clickHandler={ clickHandler}
         />
         <Button
           names='6'
           color='grey'
           wide={false}
-          clickHandler={clickHandler}
+          clickHandler={ clickHandler}
         />
-        <Button names='-' wide={false} clickHandler={clickHandler} />
+        <Button names='-' wide={false} clickHandler={ clickHandler} />
       </div>
 
       <div className='row'>
         <Button
-          names='0'
+          names='1'
           color='grey'
-          wide={true}
-          clickHandler={clickHandler}
+          wide={false}
+          clickHandler={ clickHandler}
         />
+        <Button
+          names='2'
+          color='grey'
+          wide={false}
+          clickHandler={ clickHandler}
+        />
+        <Button
+          names='3'
+          color='grey'
+          wide={false}
+          clickHandler={ clickHandler}
+        />
+        <Button names='+' wide={false} clickHandler={ clickHandler} />
+      </div>
+
+      <div className='row'>
+        <Button names='0' color='grey' wide={true} clickHandler={ clickHandler} />
         <Button
           names='.'
           color='grey'
           wide={false}
-          clickHandler={clickHandler}
+          clickHandler={ clickHandler}
         />
         <Button
           names='='
           color='grey'
           wide={false}
-          clickHandler={clickHandler}
+          clickHandler={ clickHandler}
         />
       </div>
     </div>

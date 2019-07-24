@@ -7,17 +7,21 @@ import Display from './Display';
 import calculate from '../logic/calculate';
 
 function App() {
-  const [total, setTotal] = useState(null);
+  const [total, setTotal] = useState(0);
   const [next, setNext] = useState(null);
   const [operation, setOperation] = useState(null);
 
   const handleClick = buttonName => {
-    console.log(buttonName);
+    let data = calculate({ total, next, operation }, buttonName);
+
+    setNext(data.next);
+    setOperation(data.operation);
+    setTotal(data.total);
   };
 
   return (
     <div id='container'>
-      <Display result={2} />
+      <Display result={next ? next : total} />
 
       <ButtonPanel clickHandler={handleClick} />
     </div>

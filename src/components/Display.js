@@ -8,7 +8,5 @@ const Display = (props) => {
   );
 };
 
-Display.defaultProps = {
-  result: '0'
-};
+
 export default Display;

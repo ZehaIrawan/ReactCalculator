@@ -1,8 +1,25 @@
-import Big   from 'big.js';
+import Big from 'big.js';
 
 const operate = (numberOne, numberTwo, operation) => {
-return numberOne * numberTwo
-  };
-  
-  export default operate;
-  
+
+  let result 
+  switch (operation) {
+    case '÷':
+    result =  numberOne / numberTwo 
+      break;
+    case 'X':
+      
+     result = numberOne * numberTwo 
+      break;
+    case '+':
+    result =  numberOne + numberTwo 
+      break;
+    case '-':
+    
+   result =  numberOne - numberTwo 
+      break;
+  }
+  return result
+};
+
+export default operate;
