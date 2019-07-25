@@ -4,37 +4,44 @@ const calculate = (data, buttonName) => {
   console.log(data);
   switch (buttonName) {
     case 'AC':
-      data.total = 0;
+      data.total = '';
       data.next = '';
       break;
-    case '+-':
-      data.total = data.total * -1;
-      data.next = data.total * -1;
+    case '+/-':
+      data.next = data.next * -1;
+      if (data.total !== -0) {
+        data.total = data.total * -1;
+      }
       break;
     case '%':
-      data.total = data.total * 100;
+      data.next = data.next / 100;
       break;
-    // operators:
     case '÷':
     case 'X':
     case '+':
     case '-':
-      data.operation = buttonName;
-      if (data.next !== '') {
-        data.total = operate(data.total, data.next, buttonName);
+      if (data.operation !== null && data.next !== null && data.total !== '') {
+        data.total = operate(data.total, data.next, data.operation);
+        data.operation = buttonName;
+        data.next = null;
+      } else {
+        data.operation = buttonName;
       }
-      data.next = '';
+
+      if (data.next !== null) {
+        data.total = data.next;
+        data.next = null;
+      }
       break;
     case '=':
-      if (data.next !== '') {
+      if (data.next !== null) {
         data.total = operate(data.total, data.next, data.operation);
-        data.next = '';
+        data.next = null;
       }
       break;
-      case '.':
-       data.next = data.next + '.'
-        break
-    // numbers:
+    case '.':
+      data.next = data.next + '.';
+      break;
     case '0':
     case '1':
     case '2':
@@ -45,11 +52,13 @@ const calculate = (data, buttonName) => {
     case '7':
     case '8':
     case '9':
-      data.next += parseInt(buttonName);
-      // if (data.total === 0) { data.total = data.next } //solves operation problem
+      if (data.next === null) {
+        data.next = '';
+      }
+      data.next += buttonName;
+
       break;
     default:
-      // data.next = '';
       break;
   }
 

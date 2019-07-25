@@ -7,7 +7,7 @@ import Display from './Display';
 import calculate from '../logic/calculate';
 
 function App() {
-  const [total, setTotal] = useState(0);
+  const [total, setTotal] = useState(null);
   const [next, setNext] = useState(null);
   const [operation, setOperation] = useState(null);
 
