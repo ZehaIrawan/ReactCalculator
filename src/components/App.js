@@ -10,7 +10,7 @@ function App() {
   const [total, setTotal] = useState(null);
   const [next, setNext] = useState(null);
   const [operation, setOperation] = useState(null);
-  const [result, setResult] = useState(null);
+  const [result, setResult] = useState('0');
   const [error, setError] = useState(null);
 
   const handleClick = (buttonName) => {
