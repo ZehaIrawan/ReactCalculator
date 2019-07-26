@@ -20,7 +20,7 @@ const calculate = (data, buttonName) => {
     case '+':
     case '-':
       if (data.operation !== null && data.next !== null && data.total !== '') {
-        data.total = operate(data.total, data.next, data.operation);
+        data.total = operate(data.total, data.next, data.operation, data.error);
         data.operation = buttonName;
         data.next = null;
       } else {
@@ -34,7 +34,7 @@ const calculate = (data, buttonName) => {
       break;
     case '=':
       if (data.next !== null) {
-        data.total = operate(data.total, data.next, data.operation);
+        data.total = operate(data.total, data.next, data.operation, data.error);
         data.next = null;
       }
       break;

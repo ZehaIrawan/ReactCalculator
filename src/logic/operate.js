@@ -7,6 +7,10 @@ const operate = (numberOne, numberTwo, operation) => {
   let result;
   switch (operation) {
     case '÷':
+      if (numberTwo.valueOf() === '0') {
+        return 'Not a number';
+      }
+
       result = numberOne.div(numberTwo).valueOf();
       break;
     case 'X':

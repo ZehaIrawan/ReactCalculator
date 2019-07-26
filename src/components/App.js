@@ -10,15 +10,20 @@ function App() {
   const [total, setTotal] = useState(null);
   const [next, setNext] = useState(null);
   const [operation, setOperation] = useState(null);
-  const [result, setResult] = useState(null) 
+  const [result, setResult] = useState(null);
+  const [error, setError] = useState(null);
 
   const handleClick = buttonName => {
-    const data = calculate({ total, next, operation }, buttonName);
+    const data = calculate({ total, next, operation, error }, buttonName);
 
     setNext(data.next);
     setOperation(data.operation);
     setTotal(data.total);
-    setResult(data.next || data.total)
+    setResult(data.next || data.total);
+    setError(data.error);
+    if (data.error === 'Not a number') {
+      setResult(data.error);
+    }
   };
 
   return (
