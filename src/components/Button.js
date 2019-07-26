@@ -6,7 +6,6 @@ const Button = props => {
   return (
     <div
       onClick={() => clickHandler(names)}
-      value={names}
       className={
         'button ' +
         (color ? 'grey ' : 'tomato ') +

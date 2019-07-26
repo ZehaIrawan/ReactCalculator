@@ -22,7 +22,6 @@ const operate = (numberOne, numberTwo, operation) => {
     default:
       break;
   }
-  // console.log(result);
   return result;
 };
 
