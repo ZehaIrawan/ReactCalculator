@@ -13,8 +13,10 @@ function App() {
   const [result, setResult] = useState(null);
   const [error, setError] = useState(null);
 
-  const handleClick = buttonName => {
-    const data = calculate({ total, next, operation, error }, buttonName);
+  const handleClick = (buttonName) => {
+    const data = calculate({
+      total, next, operation, error,
+    }, buttonName);
 
     setNext(data.next);
     setOperation(data.operation);
@@ -27,7 +29,7 @@ function App() {
   };
 
   return (
-    <div id='container'>
+    <div id="container">
       <Display result={result} />
 
       <ButtonPanel clickHandler={handleClick} />
