@@ -10,18 +10,20 @@ function App() {
   const [total, setTotal] = useState(null);
   const [next, setNext] = useState(null);
   const [operation, setOperation] = useState(null);
+  const [result, setResult] = useState(null) 
 
   const handleClick = buttonName => {
-    let data = calculate({ total, next, operation }, buttonName);
+    const data = calculate({ total, next, operation }, buttonName);
 
     setNext(data.next);
     setOperation(data.operation);
     setTotal(data.total);
+    setResult(data.next || data.total)
   };
 
   return (
     <div id='container'>
-      <Display result={next ? next : total} />
+      <Display result={result} />
 
       <ButtonPanel clickHandler={handleClick} />
     </div>
