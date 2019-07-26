@@ -10,5 +10,6 @@ module.exports = {
       'no-nested-ternary': 0,
       'no-unused-expressions': 0,
       'no-restricted-globals': 0,
+      "import/no-unresolved": "off"
       }
 };
