@@ -21,11 +21,8 @@ function App() {
     setNext(data.next);
     setOperation(data.operation);
     setTotal(data.total);
-    setResult(data.next || data.total);
+    setResult(data.next || data.total || data.error);
     setError(data.error);
-    if (data.error === 'Not a number') {
-      setResult(data.error);
-    }
   };
 
   return (
