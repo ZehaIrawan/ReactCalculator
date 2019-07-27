@@ -35,8 +35,9 @@ const calculate = (data, buttonName) => {
     case '=':
       if (data.next !== null) {
         data.total = operate(data.total, data.next, data.operation, data.error);
-        data.next = null;
+        data.next = null
       }
+      data.operation = null
       break;
     case '.':
       data.next = data.next + '.';
