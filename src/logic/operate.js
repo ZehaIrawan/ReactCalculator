@@ -26,6 +26,7 @@ const operate = (numberOne, numberTwo, operation) => {
     default:
       break;
   }
+
   return result;
 };
 

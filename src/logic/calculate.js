@@ -51,6 +51,9 @@ const calculate = (data, buttonName) => {
     case '7':
     case '8':
     case '9':
+      if(data.total === 'Not a number') {
+        data.total = ''
+      }
       if (data.next === null) {
         data.next = '';
       }
@@ -60,7 +63,7 @@ const calculate = (data, buttonName) => {
     default:
       break;
   }
-
+console.log(data)
   return data;
 };
 
