@@ -64,7 +64,7 @@ const calculate = (data, buttonName) => {
     default:
       break;
   }
-console.log(data)
+// console.log(data)
   return data;
 };
 
