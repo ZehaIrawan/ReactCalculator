@@ -13,7 +13,10 @@ const calculate = (data, buttonName) => {
       }
       break;
     case '%':
-      data.next = data.next / 100;
+      if(data.next !== null) {
+        data.next = ((data.next / 100).toString());
+      }
+      data.total = ((data.total / 100).toString());
       break;
     case '÷':
     case 'X':
@@ -64,7 +67,7 @@ const calculate = (data, buttonName) => {
     default:
       break;
   }
-// console.log(data)
+console.log(data)
   return data;
 };
 
