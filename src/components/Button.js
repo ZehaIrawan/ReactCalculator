@@ -1,25 +1,28 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-const Button = props => {
-  let bg;
-
-  props.color === 'grey'
-    ? (bg = {
-        backgroundColor: 'grey'
-      })
-    : (bg = {
-        backgroundColor: 'tomato'
-      });
-
-  let expand;
-
-  props.wide ? (expand = { width: '50%' }) : (expand = { width: '25%' });
+const Button = (props) => {
+  const {
+    clickHandler, names, wide, color,
+  } = props;
 
   return (
-    <div className='button' style={{ ...bg, ...expand }}>
-      {props.names}
+    <div
+      onClick={() => clickHandler(names)}
+      className={
+`button ${(color ? 'grey ' : 'tomato ')} ${(wide ? 'fifty' : 'twentyfive')}`
+      }
+    >
+      {names}
     </div>
   );
+};
+
+Button.propTypes = {
+  clickHandler: PropTypes.func.isRequired,
+  names: PropTypes.string.isRequired,
+  wide: PropTypes.bool.isRequired,
+  color: PropTypes.string.isRequired,
 };
 
 export default Button;

@@ -1,5 +1,22 @@
 .button {
   text-align: center;
   line-height: 100px;
-  border: 1px solid lightgray;
+  border: 1px solid rgb(142,142,142	);
+  cursor: pointer;
+}
+
+.grey {
+  background-color: rgb(224,224,224)
+}
+
+.tomato {
+  background-color:rgb(233,151,72)
+}
+
+.fifty {
+  width: 50%;
+}
+
+.twentyfive {
+  width: 25%;
 }
