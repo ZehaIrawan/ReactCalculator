@@ -10,10 +10,21 @@ const Display = (props) => {
   );
 };
 
+function nullable(subRequirement) {
+  const check = (required, p, key, ...rest) => {
+    if (p[key] === null) {
+      return null;
+    }
+    const sub = required ? subRequirement.isRequired : subRequirement;
+    return sub(p, key, ...rest);
+  };
+  const fn = check.bind(null, false);
+  fn.isRequired = check.bind(null, true);
+  return fn;
+}
+
 Display.propTypes = {
-  result: PropTypes.string,
+  result: nullable(PropTypes.string).isRequired,
 };
-
-
 
 export default Display;

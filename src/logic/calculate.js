@@ -43,7 +43,10 @@ const calculate = (data, buttonName) => {
       data.operation = null
       break;
     case '.':
-      data.next = data.next + '.';
+      if(data.next !== null) {
+        data.next = data.next + '.';
+      }
+      data.total = data.total + '.';
       break;
     case '0':
     case '1':
