@@ -7,6 +7,8 @@ const Conflict = () => {
         <input type="password" name="password" />
         <button type="submit">Submit</button>
       </form>
+
+      <span>Conflict</span>
     </div>
   )
 };
